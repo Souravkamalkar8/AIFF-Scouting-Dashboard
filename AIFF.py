@@ -106,8 +106,8 @@ with c1:
     st.image(Avatar)
 
 with c2:
-    st.subheader(player[0])
-    st.text('Team:' + team[0])
+    st.subheader(player)
+    st.text('Team:' + team)
     st.text('Competition:' + competition )
     
 with c3:
