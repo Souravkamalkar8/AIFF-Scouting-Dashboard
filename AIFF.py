@@ -21,23 +21,23 @@ df=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSwMdNgfS2HwFKh8
 selection= df[['Season', 'Competition', 'Role', 'Team', 'Name']]
 
 #st.sidebar.markdown('Select a Season')
-season= st.selectbox("Select a Season", (selection['Season'].unique()))
+season= st.sidebar.selectbox("Select a Season", (selection['Season'].unique()))
 selection= selection[selection['Season']==season]
 
 #st.sidebar.markdown('Select a Competition')
-competition= st.selectbox("Select a Competition ", (selection['Competition'].unique()))
+competition= st.sidebar.selectbox("Select a Competition ", (selection['Competition'].unique()))
 selection=selection[selection['Competition']== competition]
 
 #st.sidebar.markdown('Select a Team')
-team= st.selectbox("Select a Team", (selection['Team'].unique()))
+team= st.sidebar.selectbox("Select a Team", (selection['Team'].unique()))
 selection=selection[selection['Team']== team]
 
 #st.sidebar.markdown('Select a Position')
-position= st.selectbox("Select a Position", (selection['Role'].unique()))
+position= st.sidebar.selectbox("Select a Position", (selection['Role'].unique()))
 selection=selection[selection['Team']== position]
 
 #st.sidebar.markdown('Select a Player')
-player= st.selectbox("Select a Player", (selection['Name'].unique()))
+player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
