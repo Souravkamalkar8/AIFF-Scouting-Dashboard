@@ -99,30 +99,30 @@ with c2:
 #Second Row
 col1,col2,col3,col4,col5,col6=st.columns(6)
 
-with c1:
+with col1:
     urllib.request.urlretrieve('https://cdn-icons-png.flaticon.com/512/607/607445.png',
    "avatar.png")
     Avatar=Image.open("avatar.png")
     st.image(Avatar)
 
-with c2:
+with col2:
     st.subheader(player)
     st.text('Team:' + team)
     st.text('Competition:' + competition )
     
-with c3:
+with col3:
     st.text('Position:' + df['Position'][j])
     st.text('Season:' + season)
     
-with c4:
+with col4:
     st.metric('Appearances', value= df['Appearances'][j])
     st.metric('Goals', value= df['Goals'][j])
 
-with c5:
+with col5:
     st.metric('Started', value= df['Started'][j])
     st.metric('Assists', value= df['Assists'][j])
 
-with c6:
+with col6:
     st.metric('Minutes played', value= df['Minutes played'][j])
     st.metric('Clean sheets', value= df['Clean sheets'][j])
 
