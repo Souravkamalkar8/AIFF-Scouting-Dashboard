@@ -111,7 +111,7 @@ with col2:
     st.text('Competition:' + competition )
     
 with col3:
-    st.subheader('')    
+    st.subheader('                   ')    
     st.text('Position:' + df['Position'][j])
     st.text('Season:' + season)
     
