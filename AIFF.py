@@ -20,23 +20,23 @@ st.sidebar.header('Player Scouting Dashboard')
 df=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSwMdNgfS2HwFKh8X72hFPbtc-7AtwvwK3_Q26kX-Z9wEqHCxQ8VE8D0cPx68GUL64HxyHepC7psZsr/pub?output=csv')
 selection= df[['Season', 'Competition', 'Role', 'Team', 'Name']]
 
-st.markdown('Select a Season')
+#st.sidebar.markdown('Select a Season')
 season= st.selectbox("Select a Season", (selection['Season'].unique()))
 selection= selection[selection['Season']==season]
 
-st.markdown('Select a Competition')
+#st.sidebar.markdown('Select a Competition')
 competition= st.selectbox("Select a Competition ", (selection['Competition'].unique()))
 selection=selection[selection['Competition']== competition]
 
-st.markdown('Select a Team')
+#st.sidebar.markdown('Select a Team')
 team= st.selectbox("Select a Team", (selection['Team'].unique()))
 selection=selection[selection['Team']== team]
 
-st.markdown('Select a Position')
+#st.sidebar.markdown('Select a Position')
 position= st.selectbox("Select a Position", (selection['Role'].unique()))
 selection=selection[selection['Team']== position]
 
-st.markdown('Select a Player')
+#st.sidebar.markdown('Select a Player')
 player= st.selectbox("Select a Player", (selection['Name'].unique()))
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
