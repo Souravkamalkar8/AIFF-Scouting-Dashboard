@@ -34,7 +34,7 @@ selection=selection[selection['Team']== team]
 
 #st.sidebar.markdown('Select a Position')
 position= st.sidebar.selectbox("Select a Position", (selection['Role'].unique()))
-selection=selection[selection['Team']== position]
+selection=selection[selection['Role']== position]
 
 #st.sidebar.markdown('Select a Player')
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
