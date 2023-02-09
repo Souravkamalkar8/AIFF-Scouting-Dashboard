@@ -125,7 +125,7 @@ with col6:
     st.metric('Clean sheets', value= df['Clean sheets'][j])
 
 #Third Row
-st.markdown(player[0] + 'Scouting Report')
+st.markdown(player + 'Scouting Report')
 # Figure Size
 fig, ax = plt.subplots(figsize =(16, 9))
  
