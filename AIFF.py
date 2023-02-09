@@ -97,7 +97,7 @@ with c2:
     st.header('Season Stats' )
     
 #Second Row
-col1,col2,col3,col4,col5,col6=st.columns(6)
+col1,col2,col4,col5,col6=st.columns(1,2,1,1,1)
 
 with col1:
     urllib.request.urlretrieve('https://cdn-icons-png.flaticon.com/512/607/607445.png',
@@ -108,10 +108,7 @@ with col1:
 with col2:
     st.subheader(player)
     st.text('Team:' + team)
-    st.text('Competition:' + competition )
-    
-with col3:
-    st.subheader('                   ')    
+    st.text('Competition:' + competition )    
     st.text('Position:' + df['Position'][j])
     st.text('Season:' + season)
     
