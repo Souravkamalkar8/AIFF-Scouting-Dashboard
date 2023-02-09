@@ -126,6 +126,7 @@ with col6:
 
 #Third Row
 st.header(player + ' Scouting Report')
+st.subheader('vs.'+df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
 # Figure Size
 fig, ax = plt.subplots(figsize =(16, 9))
  
@@ -166,8 +167,8 @@ for i in ax.patches:
         break
 
 #Add Plot Title
-ax.set_title('vs.'+df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] ,
-             loc ='left', )
+#ax.set_title('vs.'+df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] ,
+             #loc ='left', )
 plt.xlabel('Percentile', fontweight ='bold', fontsize = 15)
 plt.xlim(0, 100,20)
  
