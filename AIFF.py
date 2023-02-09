@@ -125,7 +125,7 @@ with col6:
     st.metric('Clean sheets', value= df['Clean sheets'][j])
 
 #Third Row
-st.header(player + ' Scouting Report')
+st.title(player + ' Scouting Report')
 st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
 # Figure Size
 fig, ax = plt.subplots(figsize =(16, 9))
