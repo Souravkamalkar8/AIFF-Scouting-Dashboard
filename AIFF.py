@@ -125,7 +125,7 @@ with col6:
     st.metric('Clean sheets', value= df['Clean sheets'][j])
 
 #Third Row
-st.title(player + ' Scouting Report')
+st.header(player + ' Scouting Report')
 st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
 # Figure Size
 fig, ax = plt.subplots(figsize =(16, 9))
@@ -171,14 +171,17 @@ for i in ax.patches:
              #loc ='left', )
 plt.xlabel('Percentile', fontweight ='bold', fontsize = 15)
 plt.xlim(0, 100,20)
+
+st.caption('*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.')
+st.caption('*Values at the end of each bar are Per 90 values. ')
  
 # Add Text
-fig.text(0.43, 0.00, '*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.' , fontsize = 9,
-         color ='black', ha ='right', va ='bottom',
-         alpha = 0.7)
-fig.text(0.3, 0.02, '*Values at the end of each bar are Per 90 values. ' , fontsize = 9,
-         color ='black', ha ='right', va ='bottom',
-         alpha = 0.7)
+#fig.text(0.43, 0.00, '*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.' , fontsize = 9,
+         #color ='black', ha ='right', va ='bottom',
+         #alpha = 0.7)
+#fig.text(0.3, 0.02, '*Values at the end of each bar are Per 90 values. ' , fontsize = 9,
+         #color ='black', ha ='right', va ='bottom',
+         #alpha = 0.7)
 
 # Show Plot
 #plt.show()
