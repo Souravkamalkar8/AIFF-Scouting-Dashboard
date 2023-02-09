@@ -94,7 +94,7 @@ c1,c2= st.columns(2)
 with c1:
     st.header('Player Details')
 with c2:
-    st.header(player+ 'Season' + df['Season'][j]+ 'Stats' )
+    st.header('Season Stats' )
     
 #Second Row
 col1,col2,col3,col4,col5,col6=st.columns(6)
