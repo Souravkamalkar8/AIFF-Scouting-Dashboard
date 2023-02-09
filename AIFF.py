@@ -172,9 +172,7 @@ for i in ax.patches:
 plt.xlabel('Percentile', fontweight ='bold', fontsize = 15)
 plt.xlim(0, 100,20)
 
-st.caption('*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.')
-st.caption('*Values at the end of each bar are Per 90 values. ')
- 
+
 # Add Text
 #fig.text(0.43, 0.00, '*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.' , fontsize = 9,
          #color ='black', ha ='right', va ='bottom',
@@ -187,6 +185,9 @@ st.caption('*Values at the end of each bar are Per 90 values. ')
 #plt.show()
 
 st.pyplot(fig)
+st.caption('*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.')
+st.caption('*Values at the end of each bar are Per 90 values. ')
+ 
 
 #Fourth Row 
 column1,column2= st.columns(2)
