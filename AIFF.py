@@ -128,69 +128,6 @@ with col6:
 #Third Row
 st.header(player + ' Scouting Report')
 st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
-# Figure Size
-fig, ax = plt.subplots(figsize =(16, 9))
- 
-# Horizontal Bar Plot
-ax.barh(Attr, Perc)
- 
-# Remove axes splines
-for s in ['top', 'bottom', 'left', 'right']:
-    ax.spines[s].set_visible(False)
-
-#Remove x, y Ticks
-ax.xaxis.set_ticks_position('none')
-ax.yaxis.set_ticks_position('none')
- 
-# Add padding between axes and labels
-ax.xaxis.set_tick_params(pad = 5)
-ax.yaxis.set_tick_params(pad = 10)
- 
-# Add x, y gridlines
-ax.grid(b = True, color ='grey',
-        linestyle ='-.', linewidth = 0.5,
-        alpha = 0.2)
- 
-# Show top values
-ax.invert_yaxis()
- 
-# Add annotation to bars
-k=0
-for i in ax.patches:
-    if(k<=14):
-        plt.text(i.get_width()+0.2, i.get_y()+0.5,
-             values[k],
-             fontsize = 10, fontweight ='bold',
-             color ='black')
-        k=k+1
-    
-    elif(k==15):
-        break
-
-#Add Plot Title
-#ax.set_title('vs.'+df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] ,
-             #loc ='left', )
-plt.xlabel('Percentile', fontweight ='bold', fontsize = 15)
-plt.xlim(0, 100,20)
-
-
-# Add Text
-#fig.text(0.43, 0.00, '*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.' , fontsize = 9,
-         #color ='black', ha ='right', va ='bottom',
-         #alpha = 0.7)
-#fig.text(0.3, 0.02, '*Values at the end of each bar are Per 90 values. ' , fontsize = 9,
-         #color ='black', ha ='right', va ='bottom',
-         #alpha = 0.7)
-
-# Show Plot
-#plt.show()
-
-st.pyplot(fig)
-st.caption('*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.')
-st.caption('*Values at the end of each bar are Per 90 values. ')
- 
-#Fifth Row
-
 
 test={'Attributes': ['Non-Pen Goals',
  'Total shots',
