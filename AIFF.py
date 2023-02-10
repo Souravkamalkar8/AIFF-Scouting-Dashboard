@@ -43,8 +43,8 @@ player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 urllib.request.urlretrieve(
   'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
    "aiff.png")
-    aiff=Image.open("aiff.png")
-    st.sidebar.image(aiff)
+aiff=Image.open("aiff.png")
+st.sidebar.image(aiff)
    
     
 
