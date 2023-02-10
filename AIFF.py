@@ -41,7 +41,7 @@ selection=selection[selection['Role']== position]
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
    
-column1,column2= st.sidebar.columns(1,1)
+column1,column2= st.sidebar.columns([1,1])
 
 with column1:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
