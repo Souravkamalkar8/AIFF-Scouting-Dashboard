@@ -40,13 +40,8 @@ selection=selection[selection['Role']== position]
 #st.sidebar.markdown('Select a Player')
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
-urllib.request.urlretrieve(
-  'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
-   "aiff.png")
-aiff=Image.open("aiff.png")
-st.sidebar.image(aiff)
    
-column1,column2= st.sidebar.columns(2)
+column1,column2= st.sidebar.columns(1,1)
 
 with column1:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
