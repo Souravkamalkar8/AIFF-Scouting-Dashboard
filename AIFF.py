@@ -46,7 +46,22 @@ urllib.request.urlretrieve(
 aiff=Image.open("aiff.png")
 st.sidebar.image(aiff)
    
+column1,column2= st.sidebar.columns(2)
+
+with column1:
+    urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
+    img=Image.open("vision.jpeg")
+    width, height = img.size
+    area = (0, 0, width, height/1.32)
+    vision = img.crop(area)
+    st.sidebar.image(vision)
     
+with column2:
+    urllib.request.urlretrieve(
+  'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
+   "aiff.png")
+    aiff=Image.open("aiff.png")
+    st.sidebar.image(aiff)    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
