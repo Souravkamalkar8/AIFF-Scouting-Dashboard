@@ -228,7 +228,7 @@ text = bars.mark_text(
     ).encode(
         text='Percentile:Q'
     )
-chart = (bars + text).properties(height=600,width=400)
+chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
 st.altair_chart(chart, use_container_width=True)
 
 
