@@ -13,6 +13,7 @@ import streamlit as st
 from scipy import stats
 import matplotlib.pyplot as plt
 import matplotlib as mpl
+import altair as alt
 
 
 st.set_page_config(layout="wide", initial_sidebar_state='expanded')
@@ -188,6 +189,41 @@ st.pyplot(fig)
 st.caption('*Player compared to positional peers in'+' ' + df['Competition'][j]+ ' '+ 'over the Season'+ ' ' + df['Season'][j]+'.')
 st.caption('*Values at the end of each bar are Per 90 values. ')
  
+#Fifth Row
+
+
+test={'Attributes': ['Non-Pen Goals',
+ 'Total shots',
+ 'Succ. dribbles',
+ 'Key passes',
+ 'Accurate crosses',
+ 'Total passes',
+ 'Accurate passes %',
+ 'Accurate final third passes',
+ 'Accurate own half passes',
+ 'Accurate opposition half passes',
+ 'Tackles',
+ 'Clearances',
+ 'Interceptions',
+ 'Ground duels won',
+ 'Aerial duels won'],
+        'Percentile': Perc}
+test = pd.DataFrame(test)
+
+bars = alt.Chart(test).mark_bar().encode(
+        x='Percentile:Q',
+        y="Attributes:N"
+    )
+text = bars.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3  # Nudges text to right so it doesn't appear on top of the bar
+    ).encode(
+        text='Percentile:Q'
+    )
+chart = (bars + text+explicit).properties(height=600,width=400)
+st.altair_chart(chart, use_container_width=True)
+
 
 #Fourth Row 
 column1,column2= st.columns(2)
