@@ -169,7 +169,7 @@ chart = (bars + text).properties(height=600,width=400).configure_view(stroke=Non
 st.altair_chart(chart, use_container_width=True)
 
 st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
-st.caption('*Percentile vales are based on Per 90')
+st.caption('*Percentiles are calculated based on Per 90 values ')
 
 #Fourth Row 
 column1,column2= st.columns(2)
