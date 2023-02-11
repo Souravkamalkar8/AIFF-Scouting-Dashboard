@@ -200,7 +200,7 @@ with column1:
     width, height = img.size
     area = (0, 0, width, height/1.32)
     vision = img.crop(area)
-    vision = vision.resize((500, 500))
+    vision = vision.resize((200, 100))
     st.image(vision)
     
 with column2:
@@ -208,6 +208,7 @@ with column2:
   'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
    "aiff.png")
     aiff=Image.open("aiff.png")
+    aiff = aiff.resize((200, 100))
     st.image(aiff)
    
     
