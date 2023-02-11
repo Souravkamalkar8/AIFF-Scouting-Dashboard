@@ -149,15 +149,15 @@ with col6:
 overall=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTp0qr1bTEK9L0zYNjsWA1aOI8yEhJCk06JEiiQ90olkzi6sZdiphfVIWi9WNO8u_pgb5PckobuhSHd/pub?output=csv')
 per_90=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vRv059UgPrTUcQRXqP11UsfWjV-aHDEQPKlsKLmmcqt2zw64IJbinEdhhASa9NwR5Wm1wKlNyTwS-JQ/pub?output=csv')
 
-for i in range(0, len(overall)):
-        if ((overall['Name'][i] == player) & (overall['Team'][i] == team)) :
-            k = i
+for t in range(0, len(overall)):
+        if ((overall['Name'][t] == player) & (overall['Team'][t] == team)) :
+            k = t
             break
         else:
             continue
             
 st.header('Detailed Stats')
-tab1, tab2= st.tabs(["Chart", "Data"])
+tab1, tab2= st.tabs(['Chart', 'Data'])
 with tab1:
    st.text('Sourav Kamalkar')
 
