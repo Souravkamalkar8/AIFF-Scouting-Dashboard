@@ -159,7 +159,7 @@ for i in range(0, len(overall)):
 C1,C2= st.columns(2)
 with C1:
     st.header('Detailed Stats')
-    tab1, tab2 = st.tabs(["overall", "per90"])
+    tab1, tab2 = st.tabs(["overall", "per_90"])
     
     with tab1:
         CC1,CC2,CC3= st.columns(3)
