@@ -259,8 +259,8 @@ with tab2:
         st.text('Clearances:' + str(per_90['Clearances'][k] ))
         st.text('Blocks:' + str(per_90['Blocked shots'][k] ))
         st.text('Total Duels:' + str(per_90['Total Duels '][k] ))
-        st.text('Total duels won %:' + str(per_90['Total Duels '][k] ))
-        st.text('Ground Duels:' + str(per_90['Ground Duels '][k] ))
+        st.text('Total duels won %:' + str(per_90['Total duels won %'][k] ))
+        st.text('Ground Duels:' + str(per_90['Ground Duels'][k] ))
 
 
     with CC3:
