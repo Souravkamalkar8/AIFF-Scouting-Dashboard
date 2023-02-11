@@ -1,4 +1,4 @@
-altair==4.2.0
+altair==4.2.2
 anaconda-client==1.1.1
 
 ansi2html==1.7.0
