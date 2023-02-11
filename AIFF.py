@@ -159,7 +159,7 @@ for i in range(0, len(overall)):
 st.header('Detailed Stats')
 tab1, tab2 = st.tabs(["overall", "per_90"])
     
-    with tab1:
+with tab1:
         CC1,CC2,CC3= st.columns(3)
         with CC1:
             st.subheader('Goal Contributions' )
@@ -215,7 +215,7 @@ tab1, tab2 = st.tabs(["overall", "per_90"])
             st.text('Yellow cards:' + overall['Yellow cards'][k] )
             st.text('Red cards:' + overall['Red cards'][k] )
     
-    with tab2:
+with tab2:
         CC1,CC2,CC3= st.columns(3)
         with CC1:
             st.subheader('Goal Contributions' )
