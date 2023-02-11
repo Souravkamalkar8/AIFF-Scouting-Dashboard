@@ -198,6 +198,7 @@ with column1:
     width, height = img.size
     area = (0, 0, width, height/1.32)
     vision = img.crop(area)
+    vision = vision.resize((500, 500))
     st.image(vision)
     
 with column2:
