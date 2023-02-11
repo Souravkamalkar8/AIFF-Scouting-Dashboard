@@ -41,9 +41,9 @@ selection=selection[selection['Role']== position]
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
    
-colum1,colum2= st.sidebar.columns([1,1])
+scolumn1,scolumn2= st.sidebar.columns([1,1])
 
-with colum1:
+with scolumn1:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
     img=Image.open("vision.jpeg")
     width, height = img.size
@@ -52,7 +52,7 @@ with colum1:
     vision = vision.resize((100, 50))
     st.sidebar.image(vision,use_column_width = False)
     
-with colum2:
+with scolumn2:
     urllib.request.urlretrieve(
   'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
    "aiff.png")
