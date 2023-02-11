@@ -157,7 +157,7 @@ for i in range(0, len(overall)):
             continue
             
 st.header('Detailed Stats')
-tab1, tab2 = st.tabs(["1", "2"])
+tab1,tab2= st.tabs(["📈 Chart", "🗃 Data"])
 with tab1:
    st.text('Sourav Kamalkar')
 
