@@ -159,164 +159,163 @@ for t in range(0, len(overall)):
         else:
             continue
 
-COL1,COL2= st.columns([0.6,0.4])
-with COL1:
-  st.header('Detailed Stats')
-  tab1, tab2 = st.tabs(["Overall", "Per 90"])
-  with tab1:
-    CC1,CC2,CC3= st.columns(3)
-    with CC1:
-        st.subheader('Goal Contributions' )
-        st.text('Goals: ' + str(overall['Goals'][k] ))
-        st.text('Total Shots: ' + str(overall['Total shots'][k] ))
-        st.text('Goal Conversion %: ' + str(overall['Goal conversion %'][k] ))
-        st.text('Shots on target: ' +  str(overall['Shots on target'][k] ))
-        st.text('Shots from set piece: ' +  str(overall['Shots from set piece'][k] ))
-        st.text('Penalty goals: ' +  str(overall['Penalty goals'][k] ))
-        st.text('Headed goals: ' +  str(overall['Headed goals'][k] ))
-        st.text('Big chances missed: ' +  str(overall['Big chances missed'][k] ))
 
-        st.subheader('Creativity' )
-        st.text('Assists: ' +  str(overall['Assists'][k] ))
-        st.text('Key passes: ' +  str(overall['Key passes'][k] ))
-        st.text('Passes to assist: ' +  str(overall['Passes to assist'][k] ))
-        st.text('Total Dribbles: ' +  str(overall['Total Dribbles'][k] ))
-        st.text('Successful Dribbles %: ' +  str(overall['Successful dribbles %'][k] ))
-        st.text('Total Crosses: ' +  str(overall['Total Crosses'][k] ))
-        st.text('Crossing Accuracy: ' +  str(overall['Accurate crosses %'][k] ))
-    
-    
-
-    with CC2:
-        st.text('Penalties won: ' +  str(overall['Penalty won'][k] ))
-
-        st.subheader('Passing & Ball Distribution' )
-        st.text('Total passes: ' +  str(overall['Total passes'][k] ))
-        st.text('Passing Accuracy: ' +  str(overall['Accurate passes %'][k] ))
-        st.text('Accurate final third passes: ' +  str(overall['Accurate final third passes'][k] ))
-        st.text('Accurate own half passes: ' +  str(overall['Accurate own half passes'][k] ))
-        st.text('Accurate opposition half passes:' +  str(overall['Accurate opposition half passes'][k] ))
-        st.text('Long Balls Attempted: ' +  str(overall['Long Balls Attempted'][k] ))
-        st.text('Long Balls Accuracy: ' +  str(overall['Accurate long balls %'][k] ))
-
-        st.subheader('Defensive Ability' )
-        st.text('Tackles: ' +  str(overall['Tackles'][k] ))
-        st.text('Interceptions: ' +  str(overall['Interceptions'][k] ))
-        st.text('Clearances: ' +  str(overall['Clearances'][k] ))
-        st.text('Blocks: ' +  str(overall['Blocked shots'][k] ))
-        st.text('Total Duels: ' +  str(overall['Total Duels '][k] ))
-        st.text('Total duels won %: ' +  str(overall['Total duels won %'][k] ))
-        st.text('Ground Duels: ' +  str(overall['Ground Duels'][k] ))
-
-
-    with CC3:
-        st.text('Ground duels won %: ' +  str(overall['Ground duels won %'][k] ))
-        st.text('Aerial Duels: ' +  str(overall['Aerial Duels'][k] ))
-        st.text('Aerial duels won %: ' +  str(overall['Aerial duels won %'][k] ))
-
-        st.subheader('Other' )
-        st.text('Fouls: ' +  str(overall['Fouls'][k] ))
-        st.text('Yellow cards: ' +  str(overall['Yellow cards'][k] ))
-        st.text('Red cards: ' +  str(overall['Red cards'][k] ))
-    
-  with tab2:
-    CC1,CC2,CC3= st.columns(3)
-    with CC1:
+st.header('Detailed Stats')
+tab1, tab2 = st.tabs(["Overall", "Per 90"])
+with tab1:
+  CC1,CC2,CC3= st.columns(3)
+  with CC1:
       st.subheader('Goal Contributions' )
-      st.text('Goals: ' + str(per_90['Goals'][k] ))
-      st.text('Total Shots: ' + str(per_90['Total shots'][k] ))
-      st.text('Goal Conversion %: ' + str(per_90['Goal conversion %'][k] ))
-      st.text('Shots on target: ' + str(per_90['Shots on target'][k] ))
-      st.text('Shots from set piece: ' + str(per_90['Shots from set piece'][k] ))
-      st.text('Penalty goals: ' + str(per_90['Penalty goals'][k] ))
-      st.text('Headed goals: ' + str(per_90['Headed goals'][k] ))
-      st.text('Big chances missed: ' + str(per_90['Big chances missed'][k] ))
+      st.text('Goals: ' + str(overall['Goals'][k] ))
+      st.text('Total Shots: ' + str(overall['Total shots'][k] ))
+      st.text('Goal Conversion %: ' + str(overall['Goal conversion %'][k] ))
+      st.text('Shots on target: ' +  str(overall['Shots on target'][k] ))
+      st.text('Shots from set piece: ' +  str(overall['Shots from set piece'][k] ))
+      st.text('Penalty goals: ' +  str(overall['Penalty goals'][k] ))
+      st.text('Headed goals: ' +  str(overall['Headed goals'][k] ))
+      st.text('Big chances missed: ' +  str(overall['Big chances missed'][k] ))
 
       st.subheader('Creativity' )
-      st.text('Assists: ' + str(per_90['Assists'][k] ))
-      st.text('Key passes: ' + str(per_90['Key passes'][k] ))
-      st.text('Passes to assist: ' + str(per_90['Passes to assist'][k] ))
-      st.text('Total Dribbles: ' + str(per_90['Total Dribbles'][k] ))
-      st.text('Successful Dribbles %: ' + str(per_90['Successful dribbles %'][k] ))
-      st.text('Total Crosses: ' + str(per_90['Total Crosses'][k] ))
-      st.text('Crossing Accuracy: ' + str(per_90['Accurate crosses %'][k] ))
+      st.text('Assists: ' +  str(overall['Assists'][k] ))
+      st.text('Key passes: ' +  str(overall['Key passes'][k] ))
+      st.text('Passes to assist: ' +  str(overall['Passes to assist'][k] ))
+      st.text('Total Dribbles: ' +  str(overall['Total Dribbles'][k] ))
+      st.text('Successful Dribbles %: ' +  str(overall['Successful dribbles %'][k] ))
+      st.text('Total Crosses: ' +  str(overall['Total Crosses'][k] ))
+      st.text('Crossing Accuracy: ' +  str(overall['Accurate crosses %'][k] ))
 
 
 
-    with CC2:
-      st.text('Penalties won' + str(overall['Penalty won'][k] ))
+  with CC2:
+      st.text('Penalties won: ' +  str(overall['Penalty won'][k] ))
 
       st.subheader('Passing & Ball Distribution' )
-      st.text('Total passes: ' + str(per_90['Total passes'][k] ))
-      st.text('Passing Accuracy: ' + str(per_90['Accurate passes %'][k] ))
-      st.text('Accurate final third passes: ' + str(per_90['Accurate final third passes'][k] ))
-      st.text('Accurate own half passes: ' + str(per_90['Accurate own half passes'][k] ))
-      st.text('Accurate opposition half passes: ' + str(per_90['Accurate opposition half passes'][k] ))
-      st.text('Long Balls Attempted: ' + str(per_90['Long Balls Attempted'][k] ))
-      st.text('Long Balls Accuracy: ' + str(per_90['Accurate long balls %'][k] ))
+      st.text('Total passes: ' +  str(overall['Total passes'][k] ))
+      st.text('Passing Accuracy: ' +  str(overall['Accurate passes %'][k] ))
+      st.text('Accurate final third passes: ' +  str(overall['Accurate final third passes'][k] ))
+      st.text('Accurate own half passes: ' +  str(overall['Accurate own half passes'][k] ))
+      st.text('Accurate opposition half passes:' +  str(overall['Accurate opposition half passes'][k] ))
+      st.text('Long Balls Attempted: ' +  str(overall['Long Balls Attempted'][k] ))
+      st.text('Long Balls Accuracy: ' +  str(overall['Accurate long balls %'][k] ))
 
       st.subheader('Defensive Ability' )
-      st.text('Tackles: ' + str(per_90['Tackles'][k] ))
-      st.text('Interceptions: ' + str(per_90['Interceptions'][k] ))
-      st.text('Clearances: ' + str(per_90['Clearances'][k] ))
-      st.text('Blocks: ' + str(per_90['Blocked shots'][k] ))
-      st.text('Total Duels: ' + str(per_90['Total Duels '][k] ))
-      st.text('Total duels won %: ' + str(per_90['Total duels won %'][k] ))
-      st.text('Ground Duels: ' + str(per_90['Ground Duels'][k] ))
+      st.text('Tackles: ' +  str(overall['Tackles'][k] ))
+      st.text('Interceptions: ' +  str(overall['Interceptions'][k] ))
+      st.text('Clearances: ' +  str(overall['Clearances'][k] ))
+      st.text('Blocks: ' +  str(overall['Blocked shots'][k] ))
+      st.text('Total Duels: ' +  str(overall['Total Duels '][k] ))
+      st.text('Total duels won %: ' +  str(overall['Total duels won %'][k] ))
+      st.text('Ground Duels: ' +  str(overall['Ground Duels'][k] ))
 
 
-    with CC3:
-      st.text('Ground duels won %: ' + str(per_90['Ground duels won %'][k] ))
-      st.text('Aerial Duels: ' + str(per_90['Aerial Duels'][k] ))
-      st.text('Aerial duels won %: ' + str(per_90['Aerial duels won %'][k] ))
+  with CC3:
+      st.text('Ground duels won %: ' +  str(overall['Ground duels won %'][k] ))
+      st.text('Aerial Duels: ' +  str(overall['Aerial Duels'][k] ))
+      st.text('Aerial duels won %: ' +  str(overall['Aerial duels won %'][k] ))
 
       st.subheader('Other' )
-      st.text('Fouls: ' + str(per_90['Fouls'][k] ))
-      st.text('Yellow cards: ' + str(per_90['Yellow cards'][k] ))
-      st.text('Red cards: ' + str(per_90['Red cards'][k] ))
+      st.text('Fouls: ' +  str(overall['Fouls'][k] ))
+      st.text('Yellow cards: ' +  str(overall['Yellow cards'][k] ))
+      st.text('Red cards: ' +  str(overall['Red cards'][k] ))
+
+with tab2:
+  CC1,CC2,CC3= st.columns(3)
+  with CC1:
+    st.subheader('Goal Contributions' )
+    st.text('Goals: ' + str(per_90['Goals'][k] ))
+    st.text('Total Shots: ' + str(per_90['Total shots'][k] ))
+    st.text('Goal Conversion %: ' + str(per_90['Goal conversion %'][k] ))
+    st.text('Shots on target: ' + str(per_90['Shots on target'][k] ))
+    st.text('Shots from set piece: ' + str(per_90['Shots from set piece'][k] ))
+    st.text('Penalty goals: ' + str(per_90['Penalty goals'][k] ))
+    st.text('Headed goals: ' + str(per_90['Headed goals'][k] ))
+    st.text('Big chances missed: ' + str(per_90['Big chances missed'][k] ))
+
+    st.subheader('Creativity' )
+    st.text('Assists: ' + str(per_90['Assists'][k] ))
+    st.text('Key passes: ' + str(per_90['Key passes'][k] ))
+    st.text('Passes to assist: ' + str(per_90['Passes to assist'][k] ))
+    st.text('Total Dribbles: ' + str(per_90['Total Dribbles'][k] ))
+    st.text('Successful Dribbles %: ' + str(per_90['Successful dribbles %'][k] ))
+    st.text('Total Crosses: ' + str(per_90['Total Crosses'][k] ))
+    st.text('Crossing Accuracy: ' + str(per_90['Accurate crosses %'][k] ))
+
+
+
+  with CC2:
+    st.text('Penalties won' + str(overall['Penalty won'][k] ))
+
+    st.subheader('Passing & Ball Distribution' )
+    st.text('Total passes: ' + str(per_90['Total passes'][k] ))
+    st.text('Passing Accuracy: ' + str(per_90['Accurate passes %'][k] ))
+    st.text('Accurate final third passes: ' + str(per_90['Accurate final third passes'][k] ))
+    st.text('Accurate own half passes: ' + str(per_90['Accurate own half passes'][k] ))
+    st.text('Accurate opposition half passes: ' + str(per_90['Accurate opposition half passes'][k] ))
+    st.text('Long Balls Attempted: ' + str(per_90['Long Balls Attempted'][k] ))
+    st.text('Long Balls Accuracy: ' + str(per_90['Accurate long balls %'][k] ))
+
+    st.subheader('Defensive Ability' )
+    st.text('Tackles: ' + str(per_90['Tackles'][k] ))
+    st.text('Interceptions: ' + str(per_90['Interceptions'][k] ))
+    st.text('Clearances: ' + str(per_90['Clearances'][k] ))
+    st.text('Blocks: ' + str(per_90['Blocked shots'][k] ))
+    st.text('Total Duels: ' + str(per_90['Total Duels '][k] ))
+    st.text('Total duels won %: ' + str(per_90['Total duels won %'][k] ))
+    st.text('Ground Duels: ' + str(per_90['Ground Duels'][k] ))
+
+
+  with CC3:
+    st.text('Ground duels won %: ' + str(per_90['Ground duels won %'][k] ))
+    st.text('Aerial Duels: ' + str(per_90['Aerial Duels'][k] ))
+    st.text('Aerial duels won %: ' + str(per_90['Aerial duels won %'][k] ))
+
+    st.subheader('Other' )
+    st.text('Fouls: ' + str(per_90['Fouls'][k] ))
+    st.text('Yellow cards: ' + str(per_90['Yellow cards'][k] ))
+    st.text('Red cards: ' + str(per_90['Red cards'][k] ))
 
    
-with COL2:
-  st.header(player + ' Scouting Report')
-  st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
-  test={'Attributes': ['Non-Pen Goals',
-                   'Total shots',
-                   'Succ. dribbles',
-                   'Key passes',
-                   'Accurate crosses',
-                   'Total passes',
-                   'Accurate passes %',
-                   'Accurate final third passes',
-                   'Accurate own half passes',
-                   'Accurate opp. half passes',
-                   'Tackles',
-                   'Clearances',
-                   'Interceptions',
-                   'Ground duels won',
-                   'Aerial duels won'],
-                          'Percentile': Perc}
-  test = pd.DataFrame(test)
 
-  bars = alt.Chart(test).mark_bar().encode(
-        x=alt.X('Percentile:Q', sort= 'ascending',
-                axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
-                 domain=False            )
-               ),
-        y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
- 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
-                axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                             , labelFontSize=13,domain=False))
+st.header(player + ' Scouting Report')
+st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
+test={'Attributes': ['Non-Pen Goals',
+                 'Total shots',
+                 'Succ. dribbles',
+                 'Key passes',
+                 'Accurate crosses',
+                 'Total passes',
+                 'Accurate passes %',
+                 'Accurate final third passes',
+                 'Accurate own half passes',
+                 'Accurate opp. half passes',
+                 'Tackles',
+                 'Clearances',
+                 'Interceptions',
+                 'Ground duels won',
+                 'Aerial duels won'],
+                        'Percentile': Perc}
+test = pd.DataFrame(test)
+
+bars = alt.Chart(test).mark_bar().encode(
+      x=alt.X('Percentile:Q', sort= 'ascending',
+              axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
+               domain=False            )
+             ),
+      y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
+'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
+              axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
+                           , labelFontSize=13,domain=False))
 
 )
-  text = bars.mark_text(
-        align='left',
-        baseline='middle',
-        dx=3  # Nudges text to right so it doesn't appear on top of the bar
-    ).encode(
-        text='Percentile:Q'
-    )
-  chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
-  st.altair_chart(chart, use_container_width=True)
+text = bars.mark_text(
+      align='left',
+      baseline='middle',
+      dx=3  # Nudges text to right so it doesn't appear on top of the bar
+  ).encode(
+      text='Percentile:Q'
+  )
+chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
+st.altair_chart(chart, use_container_width=True)
 
   st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
   st.caption('*Percentiles are calculated based on Per 90 values.')
