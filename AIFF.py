@@ -156,10 +156,8 @@ for i in range(0, len(overall)):
         else:
             continue
             
-C1= st.columns(1)
-with C1:
-    st.header('Detailed Stats')
-    tab1, tab2 = st.tabs(["overall", "per_90"])
+st.header('Detailed Stats')
+tab1, tab2 = st.tabs(["overall", "per_90"])
     
     with tab1:
         CC1,CC2,CC3= st.columns(3)
@@ -273,10 +271,9 @@ with C1:
             st.text('Yellow cards:' + per_90['Yellow cards'][k] )
             st.text('Red cards:' + per_90['Red cards'][k] )
 
-C2= st.columns(1)
-with C2:
-                  st.header(player + ' Scouting Report')
-                  st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
+
+st.header(player + ' Scouting Report')
+st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
 
                   test={'Attributes': ['Non-Pen Goals',
                    'Total shots',
