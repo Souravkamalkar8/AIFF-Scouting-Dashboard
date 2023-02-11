@@ -41,12 +41,7 @@ selection=selection[selection['Role']== position]
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
 
-#tab1, tab2= st.tabs(['Chart', 'Data'])
-#with tab1:
-   #st.text('Sourav Kamalkar')
-
-#with tab2:
-   #st.text('Gourav Kamalkar')   
+  
 scolumn1,scolumn2= st.sidebar.columns(2)
 
 with scolumn1:
@@ -116,6 +111,12 @@ values= [round(df['Non-Pen Goals'][j],2),
          round(df['Aerial duels won'][j],2)]
 
 st.header('Detailed Stats')
+tab1, tab2= st.tabs(['Chart', 'Data'])
+with tab1:
+   st.text('Sourav Kamalkar')
+
+with tab2:
+   st.text('Gourav Kamalkar') 
 
 #First Row 
 c1,c2= st.columns(2)
