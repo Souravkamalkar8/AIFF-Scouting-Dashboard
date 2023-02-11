@@ -272,8 +272,7 @@ with tab2:
 
 st.header(player + ' Scouting Report')
 st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
-
-                  test={'Attributes': ['Non-Pen Goals',
+test={'Attributes': ['Non-Pen Goals',
                    'Total shots',
                    'Succ. dribbles',
                    'Key passes',
@@ -289,31 +288,31 @@ st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df
                    'Ground duels won',
                    'Aerial duels won'],
                           'Percentile': Perc}
-                  test = pd.DataFrame(test)
+test = pd.DataFrame(test)
 
-                  bars = alt.Chart(test).mark_bar().encode(
-                          x=alt.X('Percentile:Q', sort= 'ascending',
-                                  axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
-                                   domain=False            )
-                                 ),
-                      y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
-                   'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
-                                  axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                                               , labelFontSize=13,domain=False))
+bars = alt.Chart(test).mark_bar().encode(
+        x=alt.X('Percentile:Q', sort= 'ascending',
+                axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
+                 domain=False            )
+               ),
+        y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
+ 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
+                axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
+                             , labelFontSize=13,domain=False))
 
-                  )
-                  text = bars.mark_text(
-                          align='left',
-                          baseline='middle',
-                          dx=3  # Nudges text to right so it doesn't appear on top of the bar
-                      ).encode(
-                          text='Percentile:Q'
-                      )
-                  chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
-                  st.altair_chart(chart, use_container_width=True)
+)
+text = bars.mark_text(
+        align='left',
+        baseline='middle',
+        dx=3  # Nudges text to right so it doesn't appear on top of the bar
+    ).encode(
+        text='Percentile:Q'
+    )
+chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
+st.altair_chart(chart, use_container_width=True)
 
-                  st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
-                  st.caption('*Percentiles are calculated based on Per 90 values.')
+st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
+st.caption('*Percentiles are calculated based on Per 90 values.')
 
 #Fourth Row 
 column1,column2= st.columns(2)
