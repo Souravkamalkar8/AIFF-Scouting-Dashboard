@@ -236,7 +236,7 @@ with tab2:
         st.text('Passes to assist:' + str(per_90['Passes to assist'][k] ))
         st.text('Total Dribbles:' + str(per_90['Total Dribbles'][k] ))
         st.text('Successful Dribbles %:' + str(per_90['Successful dribbles %'][k] ))
-        st.text('Total Crosses:' + str(per_90['Total Crosses'][k] )
+        st.text('Total Crosses:' + str(per_90['Total Crosses'][k] ))
         st.text('Crossing Accuracy:' + str(per_90['Accurate crosses %'][k] ))
 
 
