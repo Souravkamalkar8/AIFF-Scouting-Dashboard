@@ -203,8 +203,8 @@ with tab1:
         st.text('Clearances:' +  str(overall['Clearances'][k] ))
         st.text('Blocks:' +  str(overall['Blocked shots'][k] ))
         st.text('Total Duels:' +  str(overall['Total Duels '][k] ))
-        st.text('Total duels won %:' +  str(overall['Total Duels '][k] ))
-        st.text('Ground Duels:' +  str(overall['Ground Duels '][k] ))
+        st.text('Total duels won %:' +  str(overall['Total duels won %'][k] ))
+        st.text('Ground Duels:' +  str(overall['Ground Duels'][k] ))
 
 
     with CC3:
