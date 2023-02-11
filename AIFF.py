@@ -186,25 +186,25 @@ with tab1:
     
 
     with CC2:
-            st.text('Penalties won' +  str(overall['Penalty won'][k] ))
+        st.text('Penalties won:' +  str(overall['Penalty won'][k] ))
 
-            st.subheader('Passing & Ball Distribution' )
-            st.text('Total passes:' +  str(overall['Total passes'][k] ))
-            st.text('Passing Accuracy:' +  str(overall['Accurate passes %'][k] ))
-            st.text('Accurate final third passes:' +  str(overall['Accurate final third passes'][k] ))
-            st.text('Accurate own half passes:' +  str(overall['Accurate own half passes'][k] ))
-            st.text('Accurate opposition half passes:' +  str(overall['Accurate opposition half passes'][k] ))
-            st.text('Long Balls Attempted:' +  str(overall['Long Balls Attempted'][k] ))
-            st.text('Long Balls Accuracy:' +  str(overall['Accurate long balls %'][k] ))
+        st.subheader('Passing & Ball Distribution' )
+        st.text('Total passes:' +  str(overall['Total passes'][k] ))
+        st.text('Passing Accuracy:' +  str(overall['Accurate passes %'][k] ))
+        st.text('Accurate final third passes:' +  str(overall['Accurate final third passes'][k] ))
+        st.text('Accurate own half passes:' +  str(overall['Accurate own half passes'][k] ))
+        st.text('Accurate opposition half passes:' +  str(overall['Accurate opposition half passes'][k] ))
+        st.text('Long Balls Attempted:' +  str(overall['Long Balls Attempted'][k] ))
+        st.text('Long Balls Accuracy:' +  str(overall['Accurate long balls %'][k] ))
 
-            st.subheader('Defensive Ability' )
-            st.text('Tackles:' +  str(overall['Tackles'][k] )
-            st.text('Interceptions:' +  str(overall['Interceptions'][k] ))
-            st.text('Clearances:' +  str(overall['Clearances'][k] ))
-            st.text('Blocks:' +  str(overall['Blocked shots'][k] ))
-            st.text('Total Duels:' +  str(overall['Total Duels '][k] ))
-            st.text('Total duels won %:' +  str(overall['Total Duels '][k] ))
-            st.text('Ground Duels:' +  str(overall['Ground Duels '][k] ))
+        st.subheader('Defensive Ability' )
+        st.text('Tackles:' +  str(overall['Tackles'][k] ))
+        st.text('Interceptions:' +  str(overall['Interceptions'][k] ))
+        st.text('Clearances:' +  str(overall['Clearances'][k] ))
+        st.text('Blocks:' +  str(overall['Blocked shots'][k] ))
+        st.text('Total Duels:' +  str(overall['Total Duels '][k] ))
+        st.text('Total duels won %:' +  str(overall['Total Duels '][k] ))
+        st.text('Ground Duels:' +  str(overall['Ground Duels '][k] ))
 
 
     with CC3:
