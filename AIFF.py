@@ -194,7 +194,7 @@ with tab1:
       st.text('Passing Accuracy: ' +  str(overall['Accurate passes %'][k] ))
       st.text('Accurate final third passes: ' +  str(overall['Accurate final third passes'][k] ))
       st.text('Accurate own half passes: ' +  str(overall['Accurate own half passes'][k] ))
-      st.text('Accurate opposition half passes:' +  str(overall['Accurate opposition half passes'][k] ))
+      st.text('Accurate opposition half passes: ' +  str(overall['Accurate opposition half passes'][k] ))
       st.text('Long Balls Attempted: ' +  str(overall['Long Balls Attempted'][k] ))
       st.text('Long Balls Accuracy: ' +  str(overall['Accurate long balls %'][k] ))
 
@@ -298,13 +298,13 @@ test = pd.DataFrame(test)
 
 bars = alt.Chart(test).mark_bar().encode(
       x=alt.X('Percentile:Q', sort= 'ascending',
-              axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
+              axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 25,titleFontSize=15,grid= False,
                domain=False            )
              ),
       y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
               axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                           , labelFontSize=13,domain=False))
+                           , labelFontSize=23,domain=False))
 
 )
 text = bars.mark_text(
