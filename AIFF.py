@@ -156,7 +156,7 @@ for i in range(0, len(overall)):
         else:
             continue
             
-C1,C2= st.columns(2)
+C1= st.columns(1)
 with C1:
     st.header('Detailed Stats')
     tab1, tab2 = st.tabs(["overall", "per_90"])
@@ -272,52 +272,53 @@ with C1:
             st.text('Fouls:' + per_90['Fouls'][k] )
             st.text('Yellow cards:' + per_90['Yellow cards'][k] )
             st.text('Red cards:' + per_90['Red cards'][k] )
-        
+
+C2= st.columns(1)
 with C2:
-         st.header(player + ' Scouting Report')
-         st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
+                  st.header(player + ' Scouting Report')
+                  st.subheader('vs.'+' '+ df['Role'][j] + 's in ' + df['Competition'][j] + ' '+ df['Season'][j] )
 
-         test={'Attributes': ['Non-Pen Goals',
-          'Total shots',
-          'Succ. dribbles',
-          'Key passes',
-          'Accurate crosses',
-          'Total passes',
-          'Accurate passes %',
-          'Accurate final third passes',
-          'Accurate own half passes',
-          'Accurate opp. half passes',
-          'Tackles',
-          'Clearances',
-          'Interceptions',
-          'Ground duels won',
-          'Aerial duels won'],
-                 'Percentile': Perc}
-         test = pd.DataFrame(test)
+                  test={'Attributes': ['Non-Pen Goals',
+                   'Total shots',
+                   'Succ. dribbles',
+                   'Key passes',
+                   'Accurate crosses',
+                   'Total passes',
+                   'Accurate passes %',
+                   'Accurate final third passes',
+                   'Accurate own half passes',
+                   'Accurate opp. half passes',
+                   'Tackles',
+                   'Clearances',
+                   'Interceptions',
+                   'Ground duels won',
+                   'Aerial duels won'],
+                          'Percentile': Perc}
+                  test = pd.DataFrame(test)
 
-         bars = alt.Chart(test).mark_bar().encode(
-                 x=alt.X('Percentile:Q', sort= 'ascending',
-                         axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
-                          domain=False            )
-                        ),
-             y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
-          'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
-                         axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                                      , labelFontSize=13,domain=False))
+                  bars = alt.Chart(test).mark_bar().encode(
+                          x=alt.X('Percentile:Q', sort= 'ascending',
+                                  axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 15,titleFontSize=15,grid= False,
+                                   domain=False            )
+                                 ),
+                      y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
+                   'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
+                                  axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
+                                               , labelFontSize=13,domain=False))
 
-         )
-         text = bars.mark_text(
-                 align='left',
-                 baseline='middle',
-                 dx=3  # Nudges text to right so it doesn't appear on top of the bar
-             ).encode(
-                 text='Percentile:Q'
-             )
-         chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
-         st.altair_chart(chart, use_container_width=True)
+                  )
+                  text = bars.mark_text(
+                          align='left',
+                          baseline='middle',
+                          dx=3  # Nudges text to right so it doesn't appear on top of the bar
+                      ).encode(
+                          text='Percentile:Q'
+                      )
+                  chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
+                  st.altair_chart(chart, use_container_width=True)
 
-         st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
-         st.caption('*Percentiles are calculated based on Per 90 values.')
+                  st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
+                  st.caption('*Percentiles are calculated based on Per 90 values.')
 
 #Fourth Row 
 column1,column2= st.columns(2)
