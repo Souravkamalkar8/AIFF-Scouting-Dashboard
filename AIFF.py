@@ -116,6 +116,7 @@ values= [round(df['Non-Pen Goals'][j],2),
          round(df['Aerial duels won'][j],2)]
 
 st.header('Detailed Stats')
+
 #First Row 
 c1,c2= st.columns(2)
 
