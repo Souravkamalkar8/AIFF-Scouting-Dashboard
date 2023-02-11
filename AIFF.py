@@ -162,12 +162,12 @@ for t in range(0, len(overall)):
 COL1,COL2= st.columns([0.6,0.4])
 with COL1:
   st.header('Detailed Stats')
-  tab1, tab2 = st.tabs(["Overall", "Per_90"])
+  tab1, tab2 = st.tabs(["Overall", "Per 90"])
   with tab1:
     CC1,CC2,CC3= st.columns(3)
     with CC1:
         st.subheader('Goal Contributions' )
-        st.text('Goals:' + str(overall['Goals'][k] ))
+        st.text('Goals: ' + str(overall['Goals'][k] ))
         st.text('Total Shots:' + str(overall['Total shots'][k] ))
         st.text('Goal Conversion %:' + str(overall['Goal conversion %'][k] ))
         st.text('Shots on target:' +  str(overall['Shots on target'][k] ))
