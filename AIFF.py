@@ -111,14 +111,7 @@ values= [round(df['Non-Pen Goals'][j],2),
          round(df['Aerial duels won'][j],2)]
 
 st.header('Detailed Stats')
-tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
-data = np.random.randn(10, 1)
 
-tab1.subheader("A tab with a chart")
-tab1.line_chart(data)
-
-tab2.subheader("A tab with the data")
-tab2.write(data)
 #First Row 
 c1,c2= st.columns(2)
 
@@ -165,7 +158,120 @@ for t in range(0, len(overall)):
             break
         else:
             continue
-            
+
+st.header('Detailed Stats')
+tab1, tab2 = st.tabs(["overall", "per_90"])
+with tab1:
+    CC1,CC2,CC3= st.columns(3)
+    with CC1:
+        st.subheader('Goal Contributions' )
+        st.text('Goals:' + overall['Goals'][k] )
+        st.text('Total Shots:' + overall['Total shots'][k] )
+        st.text('Goal Conversion %:' + overall['Goal conversion %'][k] )
+        st.text('Shots on target:' + overall['Shots on target'][k] )
+        st.text('Shots from set piece:' + overall['Shots from set piece'][k] )
+        st.text('Penalty goals:' + overall['Penalty goals'][k] )
+        st.text('Headed goals:' + overall['Headed goals'][k] )
+        st.text('Big chances missed:' + overall['Big chances missed'][k] )
+
+        st.subheader('Creativity' )
+        st.text('Assists:' + overall['Assists'][k] )
+        st.text('Key passes:' + overall['Key passes'][k] )
+        st.text('Passes to assist:' + overall['Passes to assist'][k] )
+        st.text('Total Dribbles:' + overall['Total Dribbles'][k] )
+        st.text('Successful Dribbles %:' + overall['Successful dribbles %'][k] )
+        st.text('Total Crosses:' + overall['Total Crosses'][k] )
+        st.text('Crossing Accuracy:' + overall['Accurate crosses %'][k] )
+    
+    
+
+    with CC2:
+            st.text('Penalties won' + overall['Penalty won'][k] )
+
+            st.subheader('Passing & Ball Distribution' )
+            st.text('Total passes:' + overall['Total passes'][k] )
+            st.text('Passing Accuracy:' + overall['Accurate passes %'][k] )
+            st.text('Accurate final third passes:' + overall['Accurate final third passes'][k] )
+            st.text('Accurate own half passes:' + overall['Accurate own half passes'][k] )
+            st.text('Accurate opposition half passes:' + overall['Accurate opposition half passes'][k] )
+            st.text('Long Balls Attempted:' + overall['Long Balls Attempted'][k] )
+            st.text('Long Balls Accuracy:' + overall['Accurate long balls %'][k] )
+
+            st.subheader('Defensive Ability' )
+            st.text('Tackles:' + overall['Tackles'][k] )
+            st.text('Interceptions:' + overall['Interceptions'][k] )
+            st.text('Clearances:' + overall['Clearances'][k] )
+            st.text('Blocks:' + overall['Blocked shots'][k] )
+            st.text('Total Duels:' + overall['Total Duels '][k] )
+            st.text('Total duels won %:' + overall['Total Duels '][k] )
+            st.text('Ground Duels:' + overall['Ground Duels '][k] )
+
+
+    with CC3:
+        st.text('Ground duels won %:' + overall['Ground duels won %'][k] )
+        st.text('Aerial Duels:' + overall['Aerial Duels'][k] )
+        st.text('Aerial duels won %:' + overall['Aerial duels won %'][k] )
+
+        st.subheader('Other' )
+        st.text('Fouls:' + overall['Fouls'][k] )
+        st.text('Yellow cards:' + overall['Yellow cards'][k] )
+        st.text('Red cards:' + overall['Red cards'][k] )
+    
+with tab2:
+    CC1,CC2,CC3= st.columns(3)
+    with CC1:
+        st.subheader('Goal Contributions' )
+        st.text('Goals:' + per_90['Goals'][k] )
+        st.text('Total Shots:' + per_90['Total shots'][k] )
+        st.text('Goal Conversion %:' + per_90['Goal conversion %'][k] )
+        st.text('Shots on target:' + per_90['Shots on target'][k] )
+        st.text('Shots from set piece:' + per_90['Shots from set piece'][k] )
+        st.text('Penalty goals:' + per_90['Penalty goals'][k] )
+        st.text('Headed goals:' + per_90['Headed goals'][k] )
+        st.text('Big chances missed:' + per_90['Big chances missed'][k] )
+
+        st.subheader('Creativity' )
+        st.text('Assists:' + per_90['Assists'][k] )
+        st.text('Key passes:' + per_90['Key passes'][k] )
+        st.text('Passes to assist:' + per_90['Passes to assist'][k] )
+        st.text('Total Dribbles:' + per_90['Total Dribbles'][k] )
+        st.text('Successful Dribbles %:' + per_90['Successful dribbles %'][k] )
+        st.text('Total Crosses:' + per_90['Total Crosses'][k] )
+        st.text('Crossing Accuracy:' + per_90['Accurate crosses %'][k] )
+
+
+
+    with CC2:
+        st.text('Penalties won' + overall['Penalty won'][k] )
+
+        st.subheader('Passing & Ball Distribution' )
+        st.text('Total passes:' + per_90['Total passes'][k] )
+        st.text('Passing Accuracy:' + per_90['Accurate passes %'][k] )
+        st.text('Accurate final third passes:' + per_90['Accurate final third passes'][k] )
+        st.text('Accurate own half passes:' + per_90['Accurate own half passes'][k] )
+        st.text('Accurate opposition half passes:' + per_90['Accurate opposition half passes'][k] )
+        st.text('Long Balls Attempted:' + per_90['Long Balls Attempted'][k] )
+        st.text('Long Balls Accuracy:' + per_90['Accurate long balls %'][k] )
+
+        st.subheader('Defensive Ability' )
+        st.text('Tackles:' + per_90['Tackles'][k] )
+        st.text('Interceptions:' + per_90['Interceptions'][k] )
+        st.text('Clearances:' + per_90['Clearances'][k] )
+        st.text('Blocks:' + per_90['Blocked shots'][k] )
+        st.text('Total Duels:' + per_90['Total Duels '][k] )
+        st.text('Total duels won %:' + per_90['Total Duels '][k] )
+        st.text('Ground Duels:' + per_90['Ground Duels '][k] )
+
+
+    with CC3:
+        st.text('Ground duels won %:' + per_90['Ground duels won %'][k] )
+        st.text('Aerial Duels:' + per_90['Aerial Duels'][k] )
+        st.text('Aerial duels won %:' + per_90['Aerial duels won %'][k] )
+
+        st.subheader('Other' )
+        st.text('Fouls:' + per_90['Fouls'][k] )
+        st.text('Yellow cards:' + per_90['Yellow cards'][k] )
+        st.text('Red cards:' + per_90['Red cards'][k] )
 
    
    
