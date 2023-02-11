@@ -157,7 +157,7 @@ for i in range(0, len(overall)):
             continue
             
 st.header('Detailed Stats')
-tab1, tab2 = st.tabs(["overall", "per_90"])
+tab1, tab2 = st.tabs(["Overall", "Per_90"])
 with tab1:
     CC1,CC2,CC3= st.columns(3)
     with CC1:
