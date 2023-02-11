@@ -218,8 +218,8 @@ with C1:
             st.text('Red cards:' + overall['Red cards'][k] )
     
     with tab2:
-        cC1,cC2,cC3= st.columns([1,1,1])
-        with cC1:
+        CC1,CC2,CC3= st.columns([1,1,1])
+        with CC1:
             st.subheader('Goal Contributions' )
             st.text('Goals:' + per_90['Goals'][k] )
             st.text('Total Shots:' + per_90['Total shots'][k] )
@@ -241,7 +241,7 @@ with C1:
     
     
 
-        with cC2:
+        with CC2:
             st.text('Penalties won' + overall['Penalty won'][k] )
 
             st.subheader('Passing & Ball Distribution' )
@@ -263,7 +263,7 @@ with C1:
             st.text('Ground Duels:' + per_90['Ground Duels '][k] )
 
 
-        with cC3:
+        with CC3:
             st.text('Ground duels won %:' + per_90['Ground duels won %'][k] )
             st.text('Aerial Duels:' + per_90['Aerial Duels'][k] )
             st.text('Aerial duels won %:' + per_90['Aerial duels won %'][k] )
