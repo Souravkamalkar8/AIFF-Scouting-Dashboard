@@ -40,7 +40,7 @@ selection=selection[selection['Role']== position]
 #st.sidebar.markdown('Select a Player')
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
-st.header('Detailed Stats')
+#st.header('Detailed Stats')
 #tab1, tab2= st.tabs(['Chart', 'Data'])
 #with tab1:
    #st.text('Sourav Kamalkar')
