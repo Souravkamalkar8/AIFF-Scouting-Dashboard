@@ -254,7 +254,7 @@ with tab2:
         st.text('Long Balls Accuracy:' + str(per_90['Accurate long balls %'][k] ))
 
         st.subheader('Defensive Ability' )
-        st.text('Tackles:' + str(per_90['Tackles'][k] )
+        st.text('Tackles:' + str(per_90['Tackles'][k] ))
         st.text('Interceptions:' + str(per_90['Interceptions'][k] ))
         st.text('Clearances:' + str(per_90['Clearances'][k] ))
         st.text('Blocks:' + str(per_90['Blocked shots'][k] ))
