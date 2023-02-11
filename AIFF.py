@@ -213,7 +213,7 @@ with tab1:
         st.text('Aerial duels won %:' +  str(overall['Aerial duels won %'][k] ))
 
         st.subheader('Other' )
-        st.text('Fouls:' +  str(overall['Fouls'][k] )
+        st.text('Fouls:' +  str(overall['Fouls'][k] ))
         st.text('Yellow cards:' +  str(overall['Yellow cards'][k] ))
         st.text('Red cards:' +  str(overall['Red cards'][k] ))
     
