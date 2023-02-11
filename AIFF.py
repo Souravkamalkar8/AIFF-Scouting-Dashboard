@@ -159,7 +159,7 @@ for t in range(0, len(overall)):
         else:
             continue
 
-COL1,COL2= st.columns(2)
+COL1,COL2= st.columns(6,4)
 with COL1:
   st.header('Detailed Stats')
   tab1, tab2 = st.tabs(["Overall", "Per_90"])
