@@ -298,12 +298,12 @@ test = pd.DataFrame(test)
 
 bars = alt.Chart(test).mark_bar().encode(
       x=alt.X('Percentile:Q', sort= 'ascending',
-              axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 25,titleFontSize=15,grid= False,
+              axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 25,titleFontSize=20,grid= False,
                domain=False            )
              ),
       y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
-              axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
+              axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=20,grid= False
                            , labelFontSize=13,domain=False))
 
 )
