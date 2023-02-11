@@ -41,7 +41,7 @@ selection=selection[selection['Role']== position]
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
 
    
-scolumn1,scolumn2,scolumn3= st.sidebar.columns(3)
+scolumn1,scolumn2= st.sidebar.columns(2)
 
 with scolumn1:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
@@ -50,7 +50,7 @@ with scolumn1:
     area = (0, 0, width, height/1.32)
     vision = img.crop(area)
     vision = vision.resize((100, 50))
-    st.sidebar.scolumn1.image(vision,use_column_width = 'auto')
+    st.sidebar.image(vision,use_column_width = 'auto')
     
 with scolumn2:
     urllib.request.urlretrieve(
@@ -58,7 +58,7 @@ with scolumn2:
    "aiff.png")
     aiff=Image.open("aiff.png")
     aiff = aiff.resize((100, 50))
-    st.sidebar.scolumn2.image(aiff,use_column_width = 'auto')    
+    st.sidebar.image(aiff,use_column_width = 'auto')    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
