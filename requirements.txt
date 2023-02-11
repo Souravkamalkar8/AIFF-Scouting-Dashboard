@@ -152,6 +152,7 @@ statsbomb==0.3.0
 statsbombpy==1.0
 statsmodels==0.13.2
 streamlit==1.10.0
+script-runner==0.2.3
 
 tables==3.6.1
 
