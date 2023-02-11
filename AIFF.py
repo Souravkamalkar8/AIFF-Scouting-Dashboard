@@ -111,12 +111,14 @@ values= [round(df['Non-Pen Goals'][j],2),
          round(df['Aerial duels won'][j],2)]
 
 st.header('Detailed Stats')
-tab1, tab2= st.tabs(['Chart', 'Data'])
-with tab1:
-   st.text('Sourav Kamalkar')
+tab1, tab2 = st.tabs(["📈 Chart", "🗃 Data"])
+data = np.random.randn(10, 1)
 
-with tab2:
-   st.text('Gourav Kamalkar') 
+tab1.subheader("A tab with a chart")
+tab1.line_chart(data)
+
+tab2.subheader("A tab with the data")
+tab2.write(data)
 
 #First Row 
 c1,c2= st.columns(2)
