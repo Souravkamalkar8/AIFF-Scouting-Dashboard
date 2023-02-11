@@ -111,20 +111,6 @@ values= [round(df['Non-Pen Goals'][j],2),
          round(df['Aerial duels won'][j],2)]
 
 st.header('Detailed Stats')
-tab1, tab2, tab3 = st.tabs(["Cat", "Dog", "Owl"])
-
-with tab1:
-   st.header("A cat")
-   st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
-
-with tab2:
-   st.header("A dog")
-   st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
-
-with tab3:
-   st.header("An owl")
-   st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
-
 #First Row 
 c1,c2= st.columns(2)
 
