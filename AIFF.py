@@ -22,7 +22,7 @@ width, height = img.size
 area = (0, 0, width, height/1.32)
 vision = img.crop(area)
 vision = vision.resize((100, 50))
-st.sidebar.image(vision,use_column_width = False)
+st.sidebar.image(vision,use_column_width = True)
 
 
 st.sidebar.header('Player Scouting Dashboard')
@@ -53,7 +53,7 @@ urllib.request.urlretrieve(
 "aiff.png")
 aiff=Image.open("aiff.png")
 aiff = aiff.resize((100, 50))
-st.sidebar.image(aiff,use_column_width = False)    
+st.sidebar.image(aiff,use_column_width = True)    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
