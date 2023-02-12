@@ -304,7 +304,7 @@ bars = alt.Chart(test).mark_bar().encode(
       y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
               axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                           , labelFontSize=13,domain=False,labelFontWeight='bold',labelOpacity=10,labelFlush=False))
+                           , labelFontSize=13,domain=False,labelFontWeight='bold',labelOpacity=10))
 
 )
 text = bars.mark_text(
@@ -315,7 +315,7 @@ text = bars.mark_text(
       text='Percentile:Q'
   )
 chart = (bars + text).properties(height=600,width=400).configure_view(stroke=None)
-st.altair_chart(chart, use_container_width=True)
+st.altair_chart(chart, use_container_width=False)
 
 st.caption('*Player compared to positional peers in'+ ' '+competition +' '+ 'over the'+' ' + season)
 st.caption('*Percentiles are calculated based on Per 90 values.')
