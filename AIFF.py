@@ -127,7 +127,7 @@ with col2:
     st.subheader(player)
     st.write("**Team:** " + team)
     st.write('**Competition:** ' + competition )    
-    st.write('**Position:** ' + position+'-'+ df['Position'][j])
+    st.write('**Position:** ' + position+' - '+ df['Position'][j])
     st.write('**Season:** ' + season)
     
 with col4:
