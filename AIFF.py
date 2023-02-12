@@ -295,7 +295,7 @@ bars = alt.Chart(test).mark_bar().encode(
               axis=alt.Axis(title='Percentile',labels=False, ticks=False,titlePadding= 25,titleFontSize=20,grid= False,
                domain=False,titleColor='black'            )
              ),
-      y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
+      y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Passing Accuracy %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
               axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
                            , labelFontSize=15,domain=False,labelFontWeight='bold',labelOpacity=100,labelLimit=1000,labelColor='black'))
