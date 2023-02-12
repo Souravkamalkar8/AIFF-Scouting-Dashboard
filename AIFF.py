@@ -22,7 +22,7 @@ width, height = img.size
 area = (0, 0, width, height/1.32)
 vision = img.crop(area)
 vision = vision.resize((200, 100))
-st.sidebar.image(vision,use_column_width = True)
+st.sidebar.image(vision,use_column_width ='auto')
 
 
 st.sidebar.header('Player Scouting Dashboard')
