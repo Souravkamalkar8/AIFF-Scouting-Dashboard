@@ -166,7 +166,7 @@ with tab1:
   CC1,CC2,CC3= st.columns(3)
   with CC1:
       st.subheader('Goal Contributions' )
-      st.write('*Goals*: ' + str(overall['Goals'][k] ))
+      st.write('**Goals**: ' + str(overall['Goals'][k] ))
       st.write('Total Shots: ' + str(overall['Total shots'][k] ))
       st.write('Goal Conversion %: ' + str(overall['Goal conversion %'][k] ))
       st.write('Shots on target: ' +  str(overall['Shots on target'][k] ))
