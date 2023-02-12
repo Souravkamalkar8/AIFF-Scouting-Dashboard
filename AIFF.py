@@ -118,7 +118,7 @@ c1,c2= st.columns(2)
 with c1:
     st.header('Player Details')
 with c2:
-    st.header('Season Stats' )
+    st.header('Season Summary' )
     
 #Second Row
 col1,col2,col4,col5,col6=st.columns([1,2,1,1,1])
@@ -304,7 +304,7 @@ bars = alt.Chart(test).mark_bar().encode(
       y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
               axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                           , labelFontSize=13,domain=False,labelFontWeight='bold',labelOpacity=10,labelLimit=1000))
+                           , labelFontSize=13,domain=False,labelFontWeight='bold',labelOpacity=100,labelLimit=1000))
 
 )
 text = bars.mark_text(
