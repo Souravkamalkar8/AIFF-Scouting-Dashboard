@@ -321,7 +321,7 @@ st.caption('*Percentiles are calculated based on Per 90 values.')
 #Fourth Row 
 column1,column2,column3,column4,column5,column6= st.columns(6)
 
-with column3:
+with column2:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
     img=Image.open("vision.jpeg")
     width, height = img.size
@@ -330,7 +330,7 @@ with column3:
     vision = vision.resize((200, 100))
     st.image(vision)
     
-with column4:
+with column5:
     urllib.request.urlretrieve(
   'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
    "aiff.png")
