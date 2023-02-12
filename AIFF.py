@@ -15,6 +15,14 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import altair as alt
 
+urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
+img=Image.open("vision.jpeg")
+width, height = img.size
+area = (0, 0, width, height/1.32)
+vision = img.crop(area)
+vision = vision.resize((100, 50))
+st.sidebar.image(vision,use_column_width = False)
+
 
 st.set_page_config(layout="wide", initial_sidebar_state='expanded')
 st.sidebar.header('Player Scouting Dashboard')
@@ -39,27 +47,13 @@ selection=selection[selection['Role']== position]
 
 #st.sidebar.markdown('Select a Player')
 player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
-
-
-  
-scolumn1,scolumn2= st.sidebar.columns(2)
-
-with scolumn1:
-    urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
-    img=Image.open("vision.jpeg")
-    width, height = img.size
-    area = (0, 0, width, height/1.32)
-    vision = img.crop(area)
-    vision = vision.resize((100, 50))
-    st.sidebar.image(vision,use_column_width = False)
     
-with scolumn2:
-    urllib.request.urlretrieve(
-  'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
-   "aiff.png")
-    aiff=Image.open("aiff.png")
-    aiff = aiff.resize((100, 50))
-    st.sidebar.image(aiff,use_column_width = False)    
+urllib.request.urlretrieve(
+'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
+"aiff.png")
+aiff=Image.open("aiff.png")
+aiff = aiff.resize((100, 50))
+st.sidebar.image(aiff,use_column_width = False)    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
