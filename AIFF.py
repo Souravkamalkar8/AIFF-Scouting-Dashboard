@@ -30,7 +30,7 @@ df=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSwMdNgfS2HwFKh8
 selection= df[['Season', 'Competition', 'Role', 'Team', 'Name']]
 
 #st.sidebar.write('**Select a Season**')
-season= st.sidebar.selectbox("Select a Season", (selection['Season'].unique()))
+season= st.sidebar.selectbox("**Select a Season**", (selection['Season'].unique()))
 selection= selection[selection['Season']==season]
 
 #st.sidebar.markdown('Select a Competition')
