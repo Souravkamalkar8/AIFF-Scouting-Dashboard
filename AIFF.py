@@ -29,7 +29,7 @@ st.sidebar.header('Player Scouting Dashboard')
 df=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSwMdNgfS2HwFKh8X72hFPbtc-7AtwvwK3_Q26kX-Z9wEqHCxQ8VE8D0cPx68GUL64HxyHepC7psZsr/pub?output=csv')
 selection= df[['Season', 'Competition', 'Role', 'Team', 'Name']]
 
-#st.sidebar.markdown('Select a Season')
+#st.sidebar.write('**Select a Season**')
 season= st.sidebar.selectbox("Select a Season", (selection['Season'].unique()))
 selection= selection[selection['Season']==season]
 
