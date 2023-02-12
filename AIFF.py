@@ -53,7 +53,7 @@ urllib.request.urlretrieve(
 "aiff.png")
 aiff=Image.open("aiff.png")
 aiff = aiff.resize((200, 100))
-st.sidebar.image(aiff,use_column_width = True)    
+st.sidebar.image(aiff,use_column_width = 'auto')    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
 
@@ -319,9 +319,9 @@ st.caption('*Percentiles are calculated based on Per 90 values.')
 
 
 #Fourth Row 
-column1,column2= st.columns(2)
+column1,column2,column3,column4,column5,column6= st.columns(6)
 
-with column1:
+with column3:
     urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
     img=Image.open("vision.jpeg")
     width, height = img.size
@@ -330,7 +330,7 @@ with column1:
     vision = vision.resize((200, 100))
     st.image(vision)
     
-with column2:
+with column4:
     urllib.request.urlretrieve(
   'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
    "aiff.png")
