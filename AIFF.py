@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 import altair as alt
 
+st.set_page_config(layout="wide", initial_sidebar_state='expanded')
 urllib.request.urlretrieve( 'https://iftwc.com/wp-content/uploads/2023/01/Fl4GO8JX0AANhPb-edited.jpeg',"vision.jpeg")
 img=Image.open("vision.jpeg")
 width, height = img.size
@@ -24,7 +25,6 @@ vision = vision.resize((100, 50))
 st.sidebar.image(vision,use_column_width = False)
 
 
-st.set_page_config(layout="wide", initial_sidebar_state='expanded')
 st.sidebar.header('Player Scouting Dashboard')
 df=pd.read_csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vSwMdNgfS2HwFKh8X72hFPbtc-7AtwvwK3_Q26kX-Z9wEqHCxQ8VE8D0cPx68GUL64HxyHepC7psZsr/pub?output=csv')
 selection= df[['Season', 'Competition', 'Role', 'Team', 'Name']]
