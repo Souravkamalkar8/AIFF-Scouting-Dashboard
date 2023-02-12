@@ -21,7 +21,7 @@ img=Image.open("vision.jpeg")
 width, height = img.size
 area = (0, 0, width, height/1.32)
 vision = img.crop(area)
-vision = vision.resize((100, 50))
+vision = vision.resize((2, 100))
 st.sidebar.image(vision,use_column_width = True)
 
 
@@ -52,7 +52,7 @@ urllib.request.urlretrieve(
 'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
 "aiff.png")
 aiff=Image.open("aiff.png")
-aiff = aiff.resize((100, 50))
+aiff = aiff.resize((200, 100))
 st.sidebar.image(aiff,use_column_width = True)    
 
 st.sidebar.markdown('created by **_Sourav Kamalkar_**')
