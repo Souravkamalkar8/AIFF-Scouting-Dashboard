@@ -167,8 +167,8 @@ with tab1:
   with CC1:
       st.subheader('Goal Contributions' )
       st.write('**Goals**: ' + str(overall['Goals'][k] ))
-      st.write('Total Shots: ' + str(overall['Total shots'][k] ))
-      st.write('Goal Conversion %: ' + str(overall['Goal conversion %'][k] ))
+      st.write('**Total Shots:** ' + str(overall['Total shots'][k] ))
+      st.write('**Goal Conversion %:** ' + str(overall['Goal conversion %'][k]+'%'))
       st.write('Shots on target: ' +  str(overall['Shots on target'][k] ))
       st.write('Shots from set piece: ' +  str(overall['Shots from set piece'][k] ))
       st.write('Penalty goals: ' +  str(overall['Penalty goals'][k] ))
