@@ -132,9 +132,9 @@ with col1:
 with col2:
     st.subheader(player)
     st.write("Team: " + team)
-    st.text('Competition: ' + competition )    
-    st.text('Position: ' + df['Position'][j])
-    st.text('Season: ' + season)
+    st.write('Competition: ' + competition )    
+    st.write('Position: ' + df['Position'][j])
+    st.write('Season: ' + season)
     
 with col4:
     st.metric('Appearances', value= df['Appearances'][j])
