@@ -304,12 +304,12 @@ bars = alt.Chart(test).mark_bar().encode(
       y=alt.Y( 'Attributes:O',sort=['Non-Pen Goals','Total shots','Succ. dribbles','Key passes','Accurate crosses','Total passes','Accurate passes %','Accurate final third passes',
 'Accurate own half passes','Accurate opp. half passes','Tackles','Clearances','Interceptions','Ground duels won','Aerial duels won'],
               axis=alt.Axis(title=None,labels=True, ticks=False, labelPadding=10,grid= False
-                           , labelFontSize=13,domain=False,labelFontWeight='normal',labelOpacity=100,labelLimit=1000,labelColor='black'))
+                           , labelFontSize=15,domain=False,labelFontWeight='normal',labelOpacity=100,labelLimit=1000,labelColor='black'))
 
 )
 text = bars.mark_text(
       align='left',
-      baseline='middle',
+      baseline='middle',FontSize=15,
       dx=3  # Nudges text to right so it doesn't appear on top of the bar
   ).encode(
       text='Percentile:Q'
