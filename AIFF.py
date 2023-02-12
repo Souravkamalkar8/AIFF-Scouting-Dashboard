@@ -309,7 +309,7 @@ bars = alt.Chart(test).mark_bar().encode(
 )
 text = bars.mark_text(
       align='left',
-      baseline='middle', fontSize=10,
+      baseline='middle', fontSize=15,
       dx=3  # Nudges text to right so it doesn't appear on top of the bar
   ).encode(
       text='Percentile:Q'
