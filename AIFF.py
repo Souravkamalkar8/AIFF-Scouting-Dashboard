@@ -34,19 +34,19 @@ season= st.sidebar.selectbox("**Select a Season**", (selection['Season'].unique(
 selection= selection[selection['Season']==season]
 
 #st.sidebar.markdown('Select a Competition')
-competition= st.sidebar.selectbox("Select a Competition ", (selection['Competition'].unique()))
+competition= st.sidebar.selectbox("**Select a Competition** ", (selection['Competition'].unique()))
 selection=selection[selection['Competition']== competition]
 
 #st.sidebar.markdown('Select a Team')
-team= st.sidebar.selectbox("Select a Team", (selection['Team'].unique()))
+team= st.sidebar.selectbox("**Select a Team**", (selection['Team'].unique()))
 selection=selection[selection['Team']== team]
 
 #st.sidebar.markdown('Select a Position')
-position= st.sidebar.selectbox("Select a Position", (selection['Role'].unique()))
+position= st.sidebar.selectbox("**Select a Position**", (selection['Role'].unique()))
 selection=selection[selection['Role']== position]
 
 #st.sidebar.markdown('Select a Player')
-player= st.sidebar.selectbox("Select a Player", (selection['Name'].unique()))
+player= st.sidebar.selectbox("**Select a Player**", (selection['Name'].unique()))
     
 urllib.request.urlretrieve(
 'https://upload.wikimedia.org/wikipedia/en/thumb/0/07/All_India_Football_Federation_Logo.svg/640px-All_India_Football_Federation_Logo.svg.png',
